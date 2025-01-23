@@ -10,3 +10,5 @@ import Foundation
 class Person {
     
 }
+
+/*добавил комментарий*/
