@@ -8,14 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    private let person = Person()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        
+        updateNumbers()
     }
-
-
+    
+    private func updateNumbers() {
+        person.addNumber (Int.random (in: 1...10))
+    
+        for number in person.getNumbers() { // 3
+            print(number)
+        }
+    }
 }
 
