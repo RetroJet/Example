@@ -1,20 +1,19 @@
 //
-//  Helper.swift
+//  Person.swift
 //  Example
 //
-//  Created by Nazar on 22.01.2025.
+//  Created by Nazar on 25.01.2025.
 //
 
 import Foundation
 
-class Person {
-    private var numbers: [Int] = [] // 1
-
-        func addNumber(_ number: Int) { // 2
-            numbers.append(number)
-        }
-        
-        func getNumbers() -> [Int] { // 3
-            numbers
-        }
+struct Person {
+    let firstName: String
+    let secondName: String
     }
+
+struct User {
+    let login: String
+    let password: String
+    let infoUser: Person
+}

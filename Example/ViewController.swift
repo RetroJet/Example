@@ -9,19 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let person = Person()
+    let helper = Helper()
+    
+    let user1 = User(login: "morris", password: "moris12345", infoUser: Person(firstName: "Moris", secondName: "Glen"))
+    let user2 = User(login: "daryna", password: "abaldueva12345", infoUser: Person(firstName: "Daryna", secondName: "Abaldueva"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateNumbers()
-    }
-    
-    private func updateNumbers() {
-        person.addNumber (Int.random (in: 1...10))
-    
-        for number in person.getNumbers() { // 3
-            print(number)
+        helper.addPerson(user1)
+        helper.addPerson(user2)
+       
+        for user in helper.getPerson() {
+            print("Полное имя: \(user.infoUser.firstName) \(user.infoUser.secondName)")
         }
     }
+    
 }
 
