@@ -19,7 +19,8 @@ class ViewController: UIViewController {
         helper.addPerson(user1)
         helper.addPerson(user2)
         view.backgroundColor = UIColor(ciColor: .blue)
-       
+        view.alpha = CGFloat(0.90)
+        
         for user in helper.getPerson() {
             print("Полное имя: \(user.infoUser.firstName) \(user.infoUser.secondName)")
         }
