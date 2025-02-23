@@ -7,9 +7,10 @@
 
 import Foundation
 
-class UserRepository: ViewController {
+class UserRepository {
     
-    func getUser() -> [User] {
-        helper.getPerson()
+    func getUsers() -> [User] {
+        return [User(login: "morris", password: "moris12345", infoUser: Person(firstName: "Moris", secondName: "Glen")),
+                User(login: "daryna", password: "abaldueva12345", infoUser: Person(firstName: "Daryna", secondName: "Abaldueva"))]
     }
 }
