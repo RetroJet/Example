@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(ciColor: .green)
-        view.alpha = CGFloat(0.90)
+        view.backgroundColor = UIColor(ciColor: .blue)
+        view.alpha = CGFloat(1.0)
         
         
         let users = userRepository.getUsers()
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         
         updateLabel()
         view.addSubview(textLabel)
+        view.addSubview(updateButton)
     }
     private func updateLabel() {
         let person = helper.getPerson().randomElement()
@@ -36,9 +37,16 @@ class ViewController: UIViewController {
         textLabel.text = "\(firstname ?? "") \(secondName ?? "")"
         textLabel.font = .systemFont(ofSize: 25, weight: .bold)
         textLabel.textColor = .red
-        textLabel.frame = .init(x: 100, y: 100, width: 100, height: 50)
+        textLabel.frame = .init(x: 100, y: 100, width: 300, height: 50)
     }
+    
+    private let updateButton: UIButton = {
+        let testButton = UIButton()
+        testButton.setTitle("Show FullName", for: .normal)
+        testButton.backgroundColor = .green
+        testButton.frame = .init(x: 100, y: 150, width: 150, height: 50)
+        return testButton
+    }()
 }
-
 
 
